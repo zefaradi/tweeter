@@ -10,6 +10,8 @@ const app           = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
+// app.set("view engine", "ejs");
+
 // The in-memory database of tweets. It's a basic object with an array in it.
 const db = require("./lib/in-memory-db");
 
@@ -31,6 +33,11 @@ const tweetsRoutes = require("./routes/tweets")(DataHelpers);
 
 // Mount the tweets routes at the "/tweets" path prefix:
 app.use("/tweets", tweetsRoutes);
+
+// POST request to submit tweets
+app.post("/tweets/", (req, res) => {
+  res.redirect("/tweets/");
+})
 
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);
