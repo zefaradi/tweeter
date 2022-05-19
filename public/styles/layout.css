@@ -26,10 +26,8 @@ body {
  */
 
  .container {
-   /* display: flex; */
    width: 90%;
    background-color: #f4f1ec;
    margin: auto;
-   /* justify-content: center; */
    
  }
