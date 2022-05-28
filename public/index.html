@@ -36,6 +36,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
 
+    <!-- Time Ago -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
       <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -54,56 +57,49 @@
           <i class="fa-solid fa-angles-down" id = "darrow"></i>
       </div>
     </nav>
-
+    <!-- user image, first and last name -->
     <header>
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
-      <br>
       <div>
-          <h2>John&#160;<span id = "Lname">Collins</span></h2>
+          <h2 id = "Fname">John&#160;<span id = "Lname">Collins</span></h2>
       </div>
     </header>
+
+    <!-- short error message -->
+    <div class="short-error">
+      <i class="fa-solid fa-circle-exclamation icon1"></i>
+      <div class="error-text">Tweet is empty</div>
+      <i class="fa-solid fa-circle-exclamation icon2"></i>
+    </div>
+    <!-- long error message -->
+    <div class="long-error">
+      <i class="fa-solid fa-circle-exclamation icon1"></i>
+      <div class="error-text">Tweet is longer than 140 characters</div>
+      <i class="fa-solid fa-circle-exclamation icon2"></i>
+    </div>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <form method = "POST" action = "/tweets/">
-          <textarea name="text" id="tweet-text" placeholder = "What are you humming about?"></textarea>
+        <form method = "POST" action = "/tweets/" id="tweet-form">
+          <p class="humming">What are you humming about?</p>
+          <textarea row = "1" name="text" id="tweet-text" placeholder = ""></textarea>
           <div class = "submit-counter">
-            <button type="submit" class="submit-btn">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+            <button type="submit" class="submit-btn">
+              Tweet
+            </button>
+            <output name="counter" class="counter" for="tweet-text">
+              140
+            </output>
           </div>
         </form>
       </section>
+      <!-- New tweet content here -->
+    <div class="tweet-container">
+    </div>
 
-
-      <article id="old-tweet-text" >
-        <div class="tweet-header">
-          <div class="tweeter-image-name">
-            <div>
-              <img src="/images/profile-Newton.png">
-            </div>
-            <div class="user-name">
-              Newton
-            </div>
-          </div>
-          <div class="tweet-handle">
-            @SirIsaac
-          </div>
-        </div>
-        <div class="tweet-body">If I have seen it is by standing on the shoulders of giants</div>
-        <div class="tweet-footer">
-          <div>
-            10 days ago
-          </div>
-          <div class="symbols">
-            <div class="flag"><i class="fa-solid fa-flag"></i></div>
-            <div class="re-tweet"><i class="fa-solid fa-retweet"></i></div>
-            <div class="heart"><i class="fa-solid fa-heart"></i></div>
-          </div>
-        </div>
-      </article>      
     </main>
   </body>
 </html>
