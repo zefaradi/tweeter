@@ -1,14 +1,21 @@
 header {
   display: flex;
-  background-color: #c48c00;
-  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+  background-color: #d5a11c;
+  /* background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png"); */
   height: 400px;
   width: 100%;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 120px;
+}
+
+#Fname {
+  color: #FFFFFF;
+  font-weight: lighter;
 }
 
 #Lname {
-  font-weight: normal;
+  color: #FFFFFF;
+  font-weight: bold;
 }
