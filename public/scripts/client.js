@@ -8,7 +8,7 @@ $(document).ready(function() {
   // --- our code goes here ---
 
   $(".tweet-container").empty();
-  const $container = $(".tweet-container")
+  const $container = $(".tweet-container");
 
   const createTweetElement = function(data) {
     let $tweet = $(`
@@ -16,7 +16,7 @@ $(document).ready(function() {
     <div class="tweet-header">
       <div class="tweeter-image-name">
         <div>
-          <img src="/images/profile-Newton.png">
+          <img src="${data.user.avatars}">
         </div>
         <div class="user-name">
           ${data.user.name}
@@ -46,10 +46,10 @@ $(document).ready(function() {
     </article>`);
 
     return $tweet;
-  }
+  };
 
   //Prevent XSS
-  const escape = function (str) {
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -64,11 +64,11 @@ $(document).ready(function() {
       $container.prepend($tweetToRender);
     }
     
-  }
+  };
 
   $(".short-error").hide();
   $(".long-error").hide();
-  $('#tweet-form').on('submit', function (event) {
+  $('#tweet-form').on('submit', function(event) {
     event.preventDefault();
 
     const data = $(this).serialize();
@@ -85,7 +85,7 @@ $(document).ready(function() {
         type: "POST",
         url: "/tweets",
         data,
-      }).then(function () {
+      }).then(function() {
         $(".long-error").hide();
         $(".short-error").hide();
         $(".counter").text("140");
@@ -94,9 +94,9 @@ $(document).ready(function() {
         $("#tweet-text").val("");
       });
     }
-  })
+  });
 
-  const loadTweets = function () {
+  const loadTweets = function() {
     $.ajax({
       type: "GET",
       url: "/tweets",
