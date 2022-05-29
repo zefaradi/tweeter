@@ -22,7 +22,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!["Desktop View"] (https://github.com/zefaradi/tweeter/blob/master/Documents/Desktop_View.PNG?raw=true)
+!["Desktop View"](https://github.com/zefaradi/tweeter/blob/master/Documents/Desktop_View.PNG?raw=true)
 
-!["Mobile View"] (https://github.com/zefaradi/tweeter/blob/master/Documents/Mobile_View.PNG?raw=true)
+!["Mobile View"](https://github.com/zefaradi/tweeter/blob/master/Documents/Mobile_View.PNG?raw=true)
 
