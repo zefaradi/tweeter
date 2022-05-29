@@ -7,11 +7,11 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-
     <!-- Nav CSS -->
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    
+    <!-- App CSS -->
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
     <!-- Header CSS -->
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
@@ -69,6 +69,21 @@
     </header>
 
     <!-- short error message -->
+    <!-- <div class="short-error">
+      <i class="fa-solid fa-circle-exclamation icon1"></i>
+      <div class="error-text">Tweet is empty</div>
+      <i class="fa-solid fa-circle-exclamation icon2"></i>
+    </div> -->
+    <!-- long error message -->
+    <!-- <div class="long-error">
+      <i class="fa-solid fa-circle-exclamation icon1"></i>
+      <div class="error-text">Tweet is longer than 140 characters</div>
+      <i class="fa-solid fa-circle-exclamation icon2"></i>
+    </div> -->
+
+    <!-- Page-specific (main) content here -->
+    <main class="container">
+         <!-- short error message -->
     <div class="short-error">
       <i class="fa-solid fa-circle-exclamation icon1"></i>
       <div class="error-text">Tweet is empty</div>
@@ -80,9 +95,6 @@
       <div class="error-text">Tweet is longer than 140 characters</div>
       <i class="fa-solid fa-circle-exclamation icon2"></i>
     </div>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
       <section class="new-tweet">
         <form method = "POST" action = "/tweets/" id="tweet-form">
           <p class="humming">What are you humming about?</p>
