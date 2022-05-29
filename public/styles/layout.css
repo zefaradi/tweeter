@@ -30,3 +30,32 @@ body {
    background-color: #f4f1ec;
    margin: auto;
  }
+
+ @media (min-width: 1024px) {
+  .media-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
+
+  .header-container {
+    grid-column: 1;
+    width: 70%;
+    transform: translate(10%, 25%);
+    padding-top: 2.5rem;
+    margin-left: 40px;
+  }
+
+  .double-arrow-and-new-tweet {
+    margin-top: 0px;
+  }
+
+  #tweet-form {
+    margin-top: 11rem;
+    grid-column: 2;
+  }
+
+  .navbar {
+    z-index: 1;
+    background-color: #4056A1;
+  }
+}
