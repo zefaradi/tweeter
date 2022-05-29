@@ -37,6 +37,10 @@ body {
     grid-template-columns: 40% 60%;
   }
 
+  .container {
+    margin-top: 120px;
+  }
+
   .header-container {
     grid-column: 1;
     width: 70%;
@@ -49,8 +53,21 @@ body {
     margin-top: 0px;
   }
 
+  .short-error,
+  .long-error {
+    display: flex;
+    gap: 15px;
+    color: #c92a2a;
+    border: 0.3rem #c92a2a solid;
+    margin: 0 5%;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 26px;
+    font-weight: 600;
+  }
+
   #tweet-form {
-    margin-top: 11rem;
+    margin-top: 2rem;
     grid-column: 2;
   }
 
