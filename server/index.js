@@ -37,7 +37,7 @@ app.use("/tweets", tweetsRoutes);
 // POST request to submit tweets
 app.post("/tweets/", (req, res) => {
   res.redirect("/tweets/");
-})
+});
 
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);
